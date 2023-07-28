@@ -1,7 +1,6 @@
 //Count Total number of zeros from 1 up to n?
 
 function countZeros(n) {
-  let count = 0;
   let arr = [];
 
   for (let i = 1; i <= n; i++) {
@@ -19,4 +18,4 @@ function countZeros(n) {
   return result;
 }
 
-console.log(countZeros(1000));
+console.log(countZeros(100));
