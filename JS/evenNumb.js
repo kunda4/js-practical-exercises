@@ -10,6 +10,6 @@ const evenNum = (arr) => {
 console.log(evenNum([1, 20, 10, 11, 12, 3, 5, 6, 8, 9, 10]));
 
 //new way
-const evenNuum = (arr) => {
-  return arr.filter((i) => i % 2 == 0).sort((a, b) => a - b);
-};
+// const evenNuum = (arr) => {
+//   return arr.filter((i) => i % 2 == 0).sort((a, b) => a - b);
+// };

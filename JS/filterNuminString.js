@@ -4,7 +4,6 @@ function filterNum(arr) {
   for (let i of arr) {
     // console.log(i);
     for (let w of numArr) {
-      console.log(w);
       if (i.includes(w)) {
         newArr.push(w);
       }
