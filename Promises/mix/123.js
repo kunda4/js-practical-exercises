@@ -22,3 +22,4 @@ async function displayData() {
 
 // Call the displayData function to fetch and display the data
 displayData();
+a;
