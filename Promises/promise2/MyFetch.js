@@ -1,6 +1,5 @@
 async function MyFunction() {
-  let url = "https://jsonplaceholder.typicode.com/todos";
-  let response = await fetch(url);
+  let response = await fetch("https://jsonplaceholder.typicode.com/todos");
   return response.json();
 }
 
