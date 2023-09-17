@@ -1,0 +1,34 @@
+/**
+In this code:
+
+The fetchPosts and fetchUsers functions are defined as before, but they now return Promises.
+
+We create a new async function called fetchPostsAndUsers, which is responsible for fetching both posts and users concurrently.
+
+Inside fetchPostsAndUsers, we use Promise.all() to concurrently execute the fetchPosts() and fetchUsers() functions. It returns an array containing the resolved results of both Promises.
+
+We use array destructuring to extract the posts and users data from the array of resolved results.
+
+You can then work with both sets of data as needed. In this example, we log them to the console.
+
+We also include error handling to catch any errors that may occur during the parallel fetching process.
+
+By using Promise.all(), you can efficiently run multiple asynchronous functions in parallel and wait for all of them to complete before proceeding with further processing.
+ */
+
+// Create an async function to fetch posts and users in parallel
+const fetchPostsAndUsers = async () => {
+  try {
+    // Use Promise.all() to fetch posts and users concurrently
+    const [posts, users] = await Promise.all([fetchPosts(), fetchUsers()]);
+
+    // Now you have both "posts" and "users" data available
+    console.log("Posts:", posts);
+    console.log("Users:", users);
+  } catch (error) {
+    console.error("Error:", error.message);
+  }
+};
+
+// Call the function to fetch posts and users in parallel
+fetchPostsAndUsers();
