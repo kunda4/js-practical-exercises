@@ -33,7 +33,6 @@ const fetchPostsAndUsers = async () => {
     // Use Promise.all() to fetch posts and users concurrently
     const [posts, users] = await Promise.all([fetchPosts(), fetchUsers()]);
 
-    // Now you have both "posts" and "users" data available
     console.log("Posts:", posts);
     console.log("Users:", users);
   } catch (error) {
