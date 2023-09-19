@@ -5,7 +5,3 @@ function displayTime() {
 }
 
 setInterval(displayTime, 1000);
-
-setTimeout(() => {
-  setInterval(displayTime, 1000);
-}, 2000);
