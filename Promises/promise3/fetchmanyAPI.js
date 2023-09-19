@@ -66,7 +66,7 @@ let arr = [
 ];
 
 function getFastPost() {
-  return Promise.race(
+  return Promise.any(
     arr.map((url) => {
       return new Promise((resolve) => {
         fetch(url).then((res) => resolve(res.json()));

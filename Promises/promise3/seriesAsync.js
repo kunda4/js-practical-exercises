@@ -2,7 +2,7 @@ function asyncOperation1() {
   return new Promise((resolve) => {
     setTimeout(() => {
       console.log("Asynchronous Opearation1");
-      resolve();
+      resolve("1");
     }, 1000);
   });
 }
@@ -11,7 +11,7 @@ function asyncOperation2() {
   return new Promise((resolve) => {
     setTimeout(() => {
       console.log("Asynchronous Operation2");
-      resolve();
+      resolve("2");
     }, 1500);
   });
 }
@@ -20,7 +20,7 @@ function asyncOperation3() {
   return new Promise((resolve) => {
     setTimeout(() => {
       console.log("Asynchronous Operation3");
-      resolve();
+      resolve("3");
     });
   });
 }

@@ -6,7 +6,7 @@ function downloadContents(urls) {
           if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
           }
-          return response.text();
+          return response.json();
         })
         .then((data) => resolve(data))
         .catch((error) => reject(error));

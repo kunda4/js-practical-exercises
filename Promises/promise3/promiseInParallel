@@ -27,18 +27,30 @@ const fetchUsers = async () => {
   const data = await response.json();
   return data;
 };
-// Create an async function to fetch posts and users in parallel
-const fetchPostsAndUsers = async () => {
+// // Create an async function to fetch posts and users in parallel
+// const fetchPostsAndUsers = async () => {
+//   try {
+//     // Use Promise.all() to fetch posts and users concurrently
+//     const [posts, users] = await Promise.all([fetchPosts(), fetchUsers()]);
+
+//     console.log("Posts:", posts);
+//     console.log("Users:", users);
+//   } catch (error) {
+//     console.error("Error:", error.message);
+//   }
+// };
+
+// // Call the function to fetch posts and users in parallel
+// fetchPostsAndUsers();
+
+async function fetchParallel() {
   try {
-    // Use Promise.all() to fetch posts and users concurrently
-    const [posts, users] = await Promise.all([fetchPosts(), fetchUsers()]);
-
-    console.log("Posts:", posts);
-    console.log("Users:", users);
+    const [Posts, Users] = await Promise.all([fetchPosts(), fetchUsers()]);
+    console.log("posts:", Posts);
+    console.log("Users:", Users);
   } catch (error) {
-    console.error("Error:", error.message);
+    console.log("error:", error);
   }
-};
+}
 
-// Call the function to fetch posts and users in parallel
-fetchPostsAndUsers();
+fetchParallel();
