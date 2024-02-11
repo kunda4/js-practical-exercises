@@ -6,7 +6,7 @@ class myClass{
     normalMethod(){
         setTimeout(function(){
             console.log(this.value)
-        }, 1000)
+        }.bind(this), 1000)
     }
     arrowMethod(){
         setTimeout(() => {
