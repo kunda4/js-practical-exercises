@@ -1,12 +1,12 @@
 function generateRandom(){
     const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
-
-    const strLength = 7;
+    let strLength = 7;
     let result = ''
 
     for(let i = 0; i<strLength; i++){
-        const random = Math.floor(Math.random * chars.length)
+        const random = Math.floor(Math.random() * chars.length)
         result += chars.substring(random, random+1)
+        console.log(random, random+1)
     }
 
     document.getElementById('randomChar').innerHTML = result
