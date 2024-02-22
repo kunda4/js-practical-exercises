@@ -8,7 +8,9 @@
 <body>
     <h1 id="world" style="color: rebeccapurple;">Hello World!</h1>
     <h2 id="name">my name is Agnes</h2>
+    <div id="divElement">
 
+    </div>
 
     <script>
         const myId = document.getElementById('world')
@@ -19,6 +21,12 @@
         const mydiv = document.createElement('div')
          mydiv.textContent = 'Category Division'
         document.body.appendChild(mydiv)
+
+        //cloneNode
+        const myElement = document.getElementById('divElement')
+        const cloneElement = myElement.cloneNode(true)
+        cloneElement.textContent = 'Hello my dear friend'
+        document.body.appendChild(cloneElement)
     </script>
 </body>
 </html>
