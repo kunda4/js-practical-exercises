@@ -6,7 +6,8 @@ const x = (a) =>
 console.log(a);
 console.log(a);
 
-const y = function (b){console.log(b)};
+const y = function(b) {console.log(b);}
+
 
 x(1);
 y(3);
