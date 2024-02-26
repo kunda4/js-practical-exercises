@@ -7,14 +7,23 @@ function importantAction(username, cb) {
         cb(`Subscribe to ${username}`)
     },1000)
 }
- const message = importantAction('username', (message)=> {
-      console.log(message)
- })
+function likedVideo(video, cb) {
+    setTimeout(() => {
+        cb(`liked the ${video} video`)
+    }, 500)
+}
+ importantAction('username', (message)=> {
+      console.log(message); 
+ });
+       likedVideo('jackychan', (action)=> {
+          console.log(action)
+      });
  
  console.log('stop');
 
 /**
 start
 stop
+liked the jackychan video
 Subscribe to username
  */
