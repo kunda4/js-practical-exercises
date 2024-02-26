@@ -10,7 +10,7 @@ function job(state){
     });
 }
 
-let promise = job(true);
+let promise = job(true); 
 
 promise.then(function(data) {
     console.log(data);
