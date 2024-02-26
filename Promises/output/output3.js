@@ -36,7 +36,7 @@ promise
     return job(true);      //Promise('resolve') but ignored
 })
 .catch(function (error){
-    console.log(error);      // Error
+    console.log(error);      // error
     return 'Error caught';   //Promise('resolve')
 })
 .then(function (data) {
@@ -49,3 +49,12 @@ promise
 .catch(function (data){
     console.log('Error:', data.message)
 })
+
+//the output will be 
+/**
+success
+Defeat
+error
+Error caught
+success: test
+ */
