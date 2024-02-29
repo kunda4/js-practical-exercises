@@ -49,4 +49,23 @@ function Palindrome(str){
     return str === str.split('').reverse().join('')
 }
 
-console.log(Palindrome('madam'))
+function Solution(s){
+    while (s.length >0){
+        let palindromes = [];
+
+        for(let i = 0; i < s.length; i++){
+            let prefix = s.slice(i, i+1);
+            if(Palindrome(prefix)){
+                palindromes.push(prefix)
+            }
+        }
+        let longestPalindrome = palindromes.reduce((a,b) => a.length> b.length ? a : b ,'');
+        if(longestPalindrome.length >=2){
+            s = s.replace(longestPalindrome, '');
+        } else{
+            break;
+        }
+    }
+    return s;
+}
+console.log(Solution('madam'))
