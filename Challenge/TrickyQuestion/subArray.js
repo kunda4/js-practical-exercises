@@ -1,3 +1,8 @@
+/**
+Write function that will accept an array and the size of the array
+and make sub array according to the size you have given.
+ */
+
 function chunkArray(arr, n){
 
     const result = [];
@@ -9,4 +14,4 @@ function chunkArray(arr, n){
     return result
 }
 
-console.log(chunkArray([1,2,3,4,5,6,7,4,5,3], 2))
+console.log(chunkArray([1,2,3,4,5,6,7,4,5,3,5], 2))
