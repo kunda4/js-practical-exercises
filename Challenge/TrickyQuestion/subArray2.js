@@ -20,4 +20,4 @@ function subArray(arr, m, k){
     }
     return count;
 }
-console.log(subArray([1,2,3,4,5,6,7,8,7,6],3,5))
+console.log(subArray([1,2,3,4,5,6,7,8,9],3,5))

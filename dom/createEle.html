@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello kunda Tell us more about you</h1>
+
+    <script>
+    
+        for(let i=0; i<200; i++){
+            const myDiv = document.createElement('div');
+            const par = document.createElement('p');
+            par.textContent = 'Hello this is live coding interview ' + i
+            myDiv.appendChild(par);
+            document.body.appendChild(myDiv)
+
+        }
+    </script>
+</body>
+</html>
